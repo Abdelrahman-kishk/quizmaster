@@ -1,0 +1,32 @@
+:root{
+  --bg:#0A0C18; --card:rgba(255,255,255,0.045); --card-b:rgba(255,255,255,0.09);
+  --indigo:#6366F1; --violet:#9333EA; --emerald:#10B981; --rose:#F43F5E; --amber:#FBBF24;
+  --text:#EDEEF7; --muted:#8B92B8;
+  --grad: linear-gradient(120deg,var(--indigo),var(--violet) 55%,var(--emerald));
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:radial-gradient(circle at 20% -10%,#1B1F3B 0%,var(--bg) 55%) var(--bg);
+  color:var(--text); font-family:'Inter',sans-serif;
+}
+h1,h2,.num{font-family:'Poppins',sans-serif}
+.app-shell{width:100%; max-width:680px; margin:0 auto; padding:32px 18px 64px}
+.glass{background:var(--card); border:1px solid var(--card-b); backdrop-filter:blur(14px); border-radius:20px}
+.btn{cursor:pointer; border:none; font-family:'Inter',sans-serif; font-weight:600; transition:transform .15s, box-shadow .15s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--grad); color:#04070f; padding:15px 22px; border-radius:14px; font-size:16px; box-shadow:0 8px 26px -8px rgba(99,102,241,.65)}
+.btn-ghost{background:transparent; border:1px solid var(--card-b); color:var(--text); padding:12px 18px; border-radius:12px}
+.pill{padding:10px 16px; border-radius:999px; border:1px solid var(--card-b); background:var(--card); color:var(--muted); cursor:pointer; font-weight:600; font-size:14px}
+.cat{padding:14px 10px; border-radius:14px; border:1px solid var(--card-b); background:var(--card); cursor:pointer; text-align:center; font-weight:600; font-size:13px}
+.cat.active{border-color:var(--indigo); background:rgba(99,102,241,.16)}
+.timerbar-outer{height:8px; border-radius:99px; background:rgba(255,255,255,.08); overflow:hidden}
+.timerbar-inner{height:100%; background:var(--emerald); transition:width 1s linear, background .3s}
+.opt{width:100%; text-align:left; padding:16px 18px; border-radius:14px; border:1px solid var(--card-b); background:var(--card); color:var(--text); font-size:15px; cursor:pointer; display:flex; gap:12px; align-items:center}
+.opt:disabled{cursor:default}
+.opt.correct{border-color:var(--emerald); background:rgba(16,185,129,.16)}
+.opt.wrong{border-color:var(--rose); background:rgba(244,63,94,.16)}
+.badge{font-size:11px; font-weight:700; padding:5px 10px; border-radius:999px; background:rgba(255,255,255,.07); color:var(--muted)}
+input[type=text]{width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--card-b); background:rgba(255,255,255,.04); color:var(--text); font-size:15px}
+input[type=text]:focus{outline:none; border-color:var(--indigo)}
+.statgrid{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.statbox{padding:14px; border-radius:14px; background:rgba(255,255,255,.04); border:1px solid var(--card-b)}
